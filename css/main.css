@@ -74,8 +74,19 @@ body{
         width: 171px;
     }
     .ws{
-        height: 90px;
-        width: 90px;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        bottom: 50px;
+        right: 25px;
+        margin-right: 60px;
+        /* background-color: rgb(20, 32, 209); */
+    }
+    
+    /**defino los atributos de la imagen de ws**/
+    .ws img{
+        height: 80px;
+        width: 80px;
     }
 }
 /* ------------------------------Fin Resposive - Mobile first--------------------------------------- */
@@ -157,16 +168,16 @@ nav ul li a{
     height: 60px;
     width: 60px;
     position: fixed;
-    bottom: 50px;
-    right: 25px;
+    bottom: 35px;
+    right: 15px;
     margin-right: 60px;
     /* background-color: rgb(20, 32, 209); */
 }
 
 /**defino los atributos de la imagen de ws**/
 .ws img{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 }
 /* -------------------------------Fin Boton Flotante----------------------------------- */
 
