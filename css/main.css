@@ -1,0 +1,295 @@
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color:rgba(0, 44, 41, 1);
+    font-family:'Poppins', sans-serif;
+    background-image: url("../public/bg8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 1423px; */
+    color: antiquewhite;
+    padding: 20px;
+}
+
+
+
+/* ----------------------------DEFINO GRIDS------------------------------------------ */
+.grid-container{
+    display: grid;
+    gap: 50px 20px;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "aside aside aside"
+    "footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    /* background-color: purple; */
+}
+
+.nav{
+    grid-area: nav;
+    /* background-color: red; */
+}
+
+.main{
+    grid-area: main;
+    /* background-color: rgb(33, 170, 56); */
+}
+
+.aside{
+    grid-area: aside;
+    /* background-color: rgb(178, 206, 19); */
+}
+
+.footer{
+    grid-area: footer;
+    /* background-color: rgb(20, 32, 209); */
+}
+/* ---------------------------Fin Grids-------------------------------------------- */
+
+
+
+
+/* ---------------------------Responsive - Mobile first-------------------------------------------- */
+@media (min-width: 768px){
+    .grid-container{
+    /* background-color: springgreen; */
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+    }
+
+    .cards img{
+        height: 272px;
+        width: 171px;
+    }
+    .ws{
+        height: 90px;
+        width: 90px;
+    }
+}
+/* ------------------------------Fin Resposive - Mobile first--------------------------------------- */
+
+
+
+
+
+/* --------------------------------- Aplico Flex box--------------------------------------*/
+ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: row; /* -------- Indico que las cards esten en fila ---------- */
+    flex-wrap: wrap; /* -------- Indico que las cards no rompan el contenedor limite ---------- */
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 3px;
+}
+/* --------------------------------- Fin Flex box--------------------------------------*/
+
+
+
+
+
+/* ----------------------Caracteristicas del Header----------------------------- */
+.header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1{
+    font-size: 10rem;
+    color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+}
+/* ----------------------Fin Header----------------------------- */
+
+
+
+
+
+/* ----------------------Caracteristicas del Nav----------------------------- */
+nav{
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row; /* -------- Indico que las cards esten en fila ---------- */
+    flex-wrap: wrap; /* -------- Indico que las cards no rompan el contenedor limite ---------- */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: antiquewhite;
+    border-radius: 5px;
+}
+/* ------------------------------------Fin Nav------------------------------------ */
+
+
+
+
+
+/* ----------------------Caracteristicas del Boton Flotante----------------------------- */
+.ws{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    margin-right: 60px;
+    /* background-color: rgb(20, 32, 209); */
+}
+
+/**defino los atributos de la imagen de ws**/
+.ws img{
+    height: 80px;
+    width: 80px;
+}
+/* -------------------------------Fin Boton Flotante----------------------------------- */
+
+
+
+
+
+/* ----------------------Caracteristicas del Main----------------------------- */
+
+ul li img{
+    height: 183px;
+    width: 115px;
+}
+
+main p{
+    border-radius: 70px;
+}
+/* ----------------------------- Fin Main------------------------------------ */
+
+
+
+
+
+
+/* ----------------------Caracteristicas del Main----------------------------- */
+
+ul li img{
+    height: 183px;
+    width: 115px;
+}
+
+aside p{
+    border-radius: 70px;
+}
+/* ----------------------------- Fin Main------------------------------------ */
+
+
+
+
+
+
+
+/* ----------------------------- Aplico Hover ------------------------------------ */
+nav a{
+    /* background-color: aqua; */
+    transition: all 0.4s ease-in-out;
+    border: solid 1px;
+}
+
+nav a:hover{
+    border: solid 1px rgba(46, 155, 116, 1);
+    color: rgba(210, 92, 178, 1);
+
+}
+
+/* ------------------------- */
+
+ul li img{
+    transition: all 0.4s ease-in-out;
+}
+
+ul li img:hover{
+    transform: scale(1.2);
+}
+
+/* ------------------------ */
+
+ul li img{
+    transition: all 0.4s ease-in-out;
+}
+
+ul li img:hover{
+    transform: scale(1.15);
+
+}
+
+/* ------------------------ */
+
+ul li p{
+    transition: all 0.4s ease-in-out;
+}
+
+ul li p:hover{
+    transform: scale(1.05);
+    background-color: rgba(46, 155, 116, 1);
+
+}
+
+
+/* ----------------------------- Fin Hover ------------------------------------ */
+
+
+
+
+/* ----------------------------- Aplico Transiciones --------------------------- */
+
+h1{
+    animation-name: nombre;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 6s;
+    animation-delay: 6s;
+}
+
+@keyframes nombre{
+    0%{
+        color: antiquewhite;
+    }
+
+    25%{
+        color: rgba(143, 38, 105, 1);
+    }
+
+    50%{
+        color: rgba(0, 122, 203, 1);
+    }
+    70%{
+        color: rgba(46, 155, 116, 1);
+    }
+
+    100%{
+        color: antiquewhite;
+    }
+}
+
+/* ----------------------------- Fin Transiciones --------------------------- */
